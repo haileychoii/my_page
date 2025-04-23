@@ -3,7 +3,101 @@ body {
   background-color: #000000;
 }
 
-@import url('https://cdn.jsdelivr.net/gh/orioncactus/pretendard/dist/web/variable/pretendardvariable.css');
+@media (max-width: 768px) {
+    .main_group {
+        width: 100%;
+    }
+}
+@media (max-width: 768px) {
+  .web_bg .main_group {
+    width: 100%;
+    margin-top: 60px; /* Adjust margin-top as needed */
+  }
+
+  .web_bg .pic-cobby {
+    width: 180px;
+    height: 180px;
+  }
+
+  .web_bg .pic {
+    width: 100px;
+    height: 100px;
+    top: 200px; /* Adjust top position as needed */
+  }
+
+  .web_bg .home-main {
+    width: 100%;
+    height: auto;
+    top: 0;
+    left: 0;
+  }
+
+  .web_bg .emoji-hh {
+    width: 100px;
+    height: 100px;
+    left: 85%; /* Center the emoji horizontally */
+    top: 85px;
+
+    transform: translateX(-50%);
+  }
+
+  .web_bg .text_mm {
+    width: 100%;
+    height: auto;
+    top: 80px; /* Adjust top position as needed */
+  }
+
+  .home-text-body {
+      display: none;
+      left: 0%;
+
+  }
+
+  .home-text-body-mobile{
+      display: inline-block;
+  }
+
+
+  .buttons_h {
+      margin-top: 42px;
+  }
+
+  #about{
+      display: flex;
+      justify-content: center;
+  }
+
+  .main_text{
+      font-size: 3.5rem;
+      /*top: -120px;*/
+      position: relative;
+  }
+
+  .main_image {
+      width: 200px;
+      height: auto;
+      display: flex;
+      justify-content: center;
+      position: relative;
+      /*top: 0px;*/
+  }
+
+  .pf-begin {
+      font-size: 65px;
+      display: flex;
+      justify-content: center;
+      line-height: 80px;
+  }
+
+  .pf_card_title  {
+  font-size: 18px;
+  }
+
+  .card-text{
+      font-size: 15px;
+  }
+}
+
 
 .full-bg {
   background-color: #000000;
@@ -101,10 +195,10 @@ background-position: 50% 50%;
   height: 154px;
   top: 33px;
   left: 0;
-  font-family: var(--font-home-font-family);
+  font-family: var(--font-primary), Pretendard;
   font-weight: var(--font-home-font-weight);
   text-shadow: 0px 4px 4px #00000040;
-  color: #ffffff;
+  color: var(--basicwhite);
   font-size: var(--font-home-font-size);
   text-align: center;
   letter-spacing: var(--font-home-letter-spacing);
@@ -157,9 +251,9 @@ background-position: 50% 50%;
   bottom: -120px;
   left: 80px;
   text-shadow: 0px 4px 4px #00000040;
-  font-family: var(--font-home-body-font-family);
+  font-family: var(--font-primary), Pretendard;
   font-weight: var(--font-home-body-font-weight);
-  color: #ffffff;
+  color: var(--basicwhite);
   font-size: var(--font-home-body-font-size);
   text-align: center;
   letter-spacing: var(--font-home-body-letter-spacing);
@@ -174,9 +268,9 @@ background-position: 50% 50%;
       top: 310px;
       text-align: center;
       text-shadow: 0px 4px 4px #00000040;
-      font-family: var(--font-home-body-font-family);
+      font-family: var(--font-primary), Pretendard;
       font-weight: var(--font-home-body-font-weight);
-      color: #ffffff;
+      color: var(--basicwhite);
       font-size: var(--font-home-body-font-size);
     letter-spacing: var(--font-home-body-letter-spacing);
   /*line-height: var(--font-home-body-line-height);*/
@@ -200,7 +294,7 @@ background-position: 50% 50%;
     .text-wrapper-2 {
       /*top: 15px;*/
       /*left: 22px;*/
-      font-family: Pretendard, AppleSDGothicNeo, sans-serif;
+      font-family: var(--font-primary), Pretendard;
       font-weight: 600;
       color: #000000;
       font-size: 18px;
@@ -242,13 +336,21 @@ background-position: 50% 50%;
             line-height: 25px;
         }
 
-.navbar-nav .nav-link {
-  color: rgba(255, 255, 255, 0.6); /* 투명한 흰색 */
-  font-weight: 700; /* bold */
-  font-size: 1.25rem; /* 18px 정도 */
+
+/* 모든 상태 (기본 + active + hover + focus)에 대해 색상 유지 */
+.navbar-nav .nav-link,
+.navbar-nav .nav-link.active,
+.navbar-nav .nav-link:focus,
+.navbar-nav .nav-link:hover {
+  color: rgba(255, 255, 255, 0.7); /* 기본 색상 */
+  font-weight: 700;
+  font-size: 1.25rem;
   transition: color 0.3s ease;
 }
 
+.navbar-nav .nav-link.active {
+  color: rgba(255, 255, 255, 1); /* 활성화된 링크는 완전한 흰색 */
+}
 /* 호버 시 진한 흰색으로 */
 .navbar-nav .nav-link:hover,
 .navbar-nav .nav-link:focus {
@@ -256,7 +358,7 @@ background-position: 50% 50%;
 }
 
 .navbar-toggler {
-      border: None;
+
     .navbar-text {
                     font-weight: 700;
                     color: var(--basicwhite);
@@ -380,14 +482,28 @@ background-position: 50% 50%;
 
 /*my cat + carousel*/
 .my_cat{
-  font-family: Pretendard, AppleSDGothicNeo, sans-serif;
+  font-family: var(--font-primary);
   font-size: 80px;
   font-weight: 900;
   line-height: 1.1em;
-  color: #ffffff;
+  color: var(--basicwhite);
   text-align: center;
   margin: 10px 20px;
 
+}
+
+/* carousel 크기 조정 */
+#carouselExampleAutoplaying {
+  max-width: 600px; /* 적절한 크기로 제한 */
+  margin: 0 auto; /* 가운데 정렬 */
+}
+
+#carouselExampleAutoplaying .carousel-item
+img {
+  height: auto;
+  max-height: 350px; /* 이미지 최대 높이 제한 */
+  object-fit: contain;
+  width: 100%;
 }
 
 @media (max-width: 480px){
@@ -395,6 +511,8 @@ background-position: 50% 50%;
     font-size: 50px;
   }
 }
+
+
 
 
 
@@ -423,24 +541,24 @@ background-position: 50% 50%;
   max-font-size: 55px;
   min-font-size: 32px;
   text-shadow: 0px 4px 4px #00000040;
-  font-family: var(--font-about-font-family);
+  font-family: var(--font-primary);
   font-size: var(--font-home-font-size);
   font-weight: 700;
   text-align: center;
   letter-spacing: var(--font-about-letter-spacing);
   line-height: var(--font-about-line-height);
   font-style: var(--font-about-font-style);
-  color: white;
+  color: var(--basicwhite);
   /*position: relative;*/
   margin-left: 20px; /* Add some left margin to separate text from the image */
 }
 
 .yellow_txt{
-  color: #FDB827;
+  color: var(--basicyellow);
 }
 
 .white_txt{
-  color: #FFFFFF;
+  color: var(--basicwhite);
 }
 /*about page의 main loopy, text end*/
 
@@ -455,7 +573,7 @@ background-position: 50% 50%;
 .about_body_text_m{
   position: absolute;
   color:#FFFFFF;
-  font-family: var(--font-about-body-m-font-family);
+  font-family: var(--font-primary);
   font-size: var(--font-about-body-m-font-size);
   font-weight: var(--font-about-body-m-font-weight);
   line-height: var(--font-about-body-m-line-height) ;
@@ -464,8 +582,8 @@ background-position: 50% 50%;
 
 .about_body_text_b{
   position: absolute;
-  color: #FFFFFF;
-  font-family: var(--font-about-body-b-font-family);
+  color: var(--basicwhite);
+  font-family: var(--font-primary);
   font-size: var(--font-about-body-b-font-size);
   font-weight: var(--font-about-body-b-font-weight);
   letter-spacing: normal;
@@ -480,7 +598,7 @@ background-position: 50% 50%;
 .pf-begin{
   width: 100%;
   font-size: 110px;
-  font-family: Pretendard, AppleSDGothicNeo, sans-serif;
+  font-family: var(--font-primary);
   font-weight: 900;
   line-height: 100px;
   color: #FFFFFF;
@@ -495,10 +613,10 @@ background-position: 50% 50%;
   background: linear-gradient(159deg, rgba(255, 255, 255, 0.40) -100%, rgba(255, 255, 255, 0.04) 100%);
   box-shadow: -5px -5px 250px 0px rgba(255, 255, 255, 0.02) inset;
   backdrop-filter: blur(21px);
-  font-family: Pretendard, AppleSDGothicNeo, sans-serif;
+  font-family: var(--font-primary);
   font-size: 24px;
   font-weight: 700;
-  color: #ffffff;
+  color: var(--basicwhite);
 }
 
 .pf_card {
@@ -508,10 +626,10 @@ background-position: 50% 50%;
   background: linear-gradient(159deg, rgba(255, 255, 255, 0.40) -100%, rgba(255, 255, 255, 0.04) 100%);
   box-shadow: -5px -5px 250px 0px rgba(255, 255, 255, 0.02) inset;
   backdrop-filter: blur(21px);
-  font-family: Pretendard, AppleSDGothicNeo, sans-serif;
+  font-family: var(--font-primary);
   font-size: 21px;
   font-weight: 500;
-  color: #ffffff;
+  color: var(--basicwhite);
 }
 
 .pf_card_header{
@@ -585,17 +703,17 @@ background-position: 50% 50%;}
 }
 
 .contact_main{
-  font-family: Pretendard, AppleSDGothicNeo, sans-serif;
+  font-family: var(--font-primary);
   font-weight: 700;
-  color: #ffffff;
+  color: var(--basicwhite);
   font-size: 48px;
   letter-spacing: 0;
 }
 
 .contact_body{
-  font-family: Pretendard, AppleSDGothicNeo, sans-serif;
+  font-family: var(--font-primary);
   font-weight: 600;
-  color: #ffffff;
+  color: var(--basicwhite);
   font-size: 16px;
   letter-spacing: 0;
   word-wrap: break-word;
