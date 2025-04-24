@@ -3,11 +3,7 @@ body {
   background-color: #000000;
 }
 
-/*@media (max-width: 768px) {*/
-/*    .main_group {*/
-/*        width: 100%;*/
-/*    }*/
-/*}*/
+
 @media (max-width: 768px) {
   .web_bg .main_group {
     width: 100%;
@@ -73,7 +69,6 @@ body {
 
   .main_text{
       font-size: 3rem;
-      /*top: -120px;*/
       position: relative;
   }
 
@@ -555,7 +550,6 @@ img {
   line-height: var(--font-about-line-height);
   font-style: var(--font-about-font-style);
   color: var(--basicwhite);
-
   margin-left: 20px; /* Add some left margin to separate text from the image */
 }
 
@@ -577,7 +571,6 @@ img {
 }
 
 .section-title {
-
   font-family: var(--font-primary);
   font-size: 5rem;
   font-weight: bold;
