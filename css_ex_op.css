@@ -64,8 +64,9 @@ body {
   }
 
   .main_text{
-      font-size: 3rem;
-      position: relative;
+      font-size: 40px !important;
+      line-height: 50px !important;
+
   }
 
   .main_image {
@@ -102,140 +103,6 @@ body {
   width: 100%;
   justify-content: space-evenly;
 }
-
-/*responsible navbar*/
-.nav-var {
-            display: flex;
-            align-items: center;
-            width: 100%;
-            max-height: auto;
-            min-height: 51px;
-            border: 1px solid rgba(255, 255, 255, 0.08);
-            background: linear-gradient(159deg, rgba(255, 255, 255, 0.40) -100%, rgba(255, 255, 255, 0.04) 100%);
-            box-shadow: -5px -5px 250px 0px rgba(255, 255, 255, 0.02) inset;
-            backdrop-filter: blur(21px);
-
-            text-align: center;
-            letter-spacing: 0;
-            line-height: 25px;
-        }
-
-
-/* 모든 상태 (기본 + active + hover + focus)에 대해 색상 유지 */
-.navbar-nav .nav-link,
-.navbar-nav .nav-link.active,
-.navbar-nav .nav-link:focus,
-.navbar-nav .nav-link:hover {
-  color: rgba(255, 255, 255, 0.7); /* 기본 색상 */
-  font-weight: 700;
-  font-size: 1.25rem;
-  transition: color 0.3s ease;
-}
-
-.navbar-nav .nav-link.active {
-  color: rgba(255, 255, 255, 1); /* 활성화된 링크는 완전한 흰색 */
-}
-/* 호버 시 진한 흰색으로 */
-.navbar-nav .nav-link:hover,
-.navbar-nav .nav-link:focus {
-  color: rgba(255, 255, 255, 1); /* 완전한 흰색 */
-}
-
-.navbar-toggler {
-
-    .navbar-text {
-                    font-weight: 700;
-                    color: var(--basicwhite);
-                    font-family: var(--font-primary);
-                    text-align: center;
-                    letter-spacing: 0;
-                    line-height: 0px;
-                    margin: 0px;
-                }
-      }
-/* 햄버거 메뉴 버튼 스타일 */
-.navbar-toggler {
-  margin-left: auto; /* 오른쪽 정렬 */
-  align-self: center; /* 세로 중앙 정렬 */
-  padding: 0.5rem; /* 버튼 클릭 영역 확보 */
-  color: rgba(255, 255, 255, 0.7);
-  background-color: transparent;
-  border: none;
-  z-index: 1050;
-}
-
-
-/* 햄버거 아이콘 색상 변경 유지 */
-.navbar-toggler-icon {
-  background-image: url("data:image/svg+xml,%3csvg xmlns='http://www.w3.org/2000/svg' fill='rgba(255, 255, 255, 0.7)' viewBox='0 0 30 30'%3e%3cpath stroke='rgba(255, 255, 255, 0.7)' stroke-linecap='round' stroke-miterlimit='10' stroke-width='2' d='M4 7h22M4 15h22M4 23h22'/%3e%3c/svg%3e");
-}
-
-.nav-drop-pf{
-  font-family: var(--font-primary);
-  font-size : 20px;
-  font-weight: 700;
-  backdrop-filter: blur(21px);
-  box-shadow: -5px -5px 250px 0px rgba(255, 255, 255, 0.02) inset;
-  border: 1px solid rgba(255, 255, 255, 0.08);
-  background: linear-gradient(159deg, rgba(255, 255, 255, 0.40) -100%, rgba(255, 255, 255, 0.04) 100%);
-  padding: 12px 20px;     /* 좌우 여백 증가 */
-  min-width: 180px;       /* 최소 너비 확보 */
-  line-height: 1.6;       /* 텍스트 간격 여유 */
-  border-radius: 12px;
-
-}
-
-/* 드롭다운 항목 스타일 */
-.dropdown-menu.nav-drop-pf .dropdown-item {
-  font-family: Pretendard, AppleSDGothicNeo, sans-serif;
-  font-size: 1.0625rem; /* 약 17px */
-  font-weight: 600;
-  color: rgba(255, 255, 255, 0.7); /* 투명한 흰색 */
-  text-align: center;
-  transition: color 0.3s ease, background-color 0.3s ease;
-}
-
-/* 호버 시 효과 */
-.dropdown-menu.nav-drop-pf .dropdown-item:hover,
-.dropdown-menu.nav-drop-pf .dropdown-item:focus {
-  color: rgba(255, 255, 255, 1); /* 완전한 흰색 */
-  background-color: rgba(255, 255, 255, 0.1); /* 약간 어두운 배경 강조 */
-}
-/* 큰 화면에서 가로 정렬 및 간격 처리 */
-@media (min-width: 992px) {
-  .navbar-nav {
-    width: 100%; /* 전체 너비 사용 */
-    justify-content: space-around; /* 균등 간격 */
-    text-align: center;
-  }
-
-  .navbar-nav .nav-item {
-    flex: 1; /* 각 항목이 동일한 너비 갖도록 */
-  }
-
-  .navbar-nav .nav-link {
-    display: block;
-    width: 100%;
-  }
-}
-
-/* 모바일 메뉴의 여백 추가 (아코디언 열릴 때 안에 내용 padding 추가) */
-@media (max-width: 991.98px) {
-  #navbarNav {
-    padding-top: 1.5rem;
-    padding-bottom: 1.5rem;
-  }
-
-  .navbar-nav .nav-item {
-    margin-bottom: 1rem;
-  }
-
-  .navbar-nav .nav-link {
-    font-size: 1.2rem;
-    font-weight: 600;
-  }
-}
-/*navvar end*/
 
 .web_bg {
   min-height: 100vh; /* Set a minimum height of 100% of the viewport height */
@@ -379,7 +246,6 @@ background-position: 50% 50%;
 
 /*home buttons*/
 .about-me {
-      /*background-color: #fbf7b8;*/
       background: linear-gradient(100deg, #fbf7b8, #facfd9);
       -webkit-backdrop-filter: blur(20px);
       backdrop-filter: blur(20px);
@@ -390,8 +256,6 @@ background-position: 50% 50%;
     }
 
     .text-wrapper-2 {
-      /*top: 15px;*/
-      /*left: 22px;*/
       font-family: var(--font-primary), Pretendard;
       font-weight: 600;
       color: #000000;
@@ -414,15 +278,140 @@ background-position: 50% 50%;
 
 /*home buttons end*/
 
+/*responsible navbar*/
+.nav-var {
+            display: flex;
+            align-items: center;
+            width: 100%;
+            max-height: auto;
+            min-height: 51px;
+            border: 1px solid rgba(255, 255, 255, 0.08);
+            background: linear-gradient(159deg, rgba(255, 255, 255, 0.40) -100%, rgba(255, 255, 255, 0.04) 100%);
+            box-shadow: -5px -5px 250px 0px rgba(255, 255, 255, 0.02) inset;
+            backdrop-filter: blur(21px);
+            text-align: center;
+            letter-spacing: 0;
+            line-height: 25px;
+        }
 
 
-.home .group {
-  position: absolute;
-  width: 43px;
-  height: 17px;
-  top: 0;
-  left: 0;
+/* 모든 상태 (기본 + active + hover + focus)에 대해 색상 유지 */
+.navbar-nav .nav-link,
+.navbar-nav .nav-link.active,
+.navbar-nav .nav-link:focus,
+.navbar-nav .nav-link:hover {
+  color: rgba(255, 255, 255, 0.7); /* 기본 색상 */
+  font-weight: 700;
+  font-size: 1.25rem;
+  transition: color 0.3s ease;
 }
+
+.navbar-nav .nav-link.active {
+  color: rgba(255, 255, 255, 1); /* 활성화된 링크는 완전한 흰색 */
+}
+/* 호버 시 진한 흰색으로 */
+.navbar-nav .nav-link:hover,
+.navbar-nav .nav-link:focus {
+  color: rgba(255, 255, 255, 1); /* 완전한 흰색 */
+}
+
+.navbar-toggler {
+
+    .navbar-text {
+                    font-weight: 700;
+                    color: var(--basicwhite);
+                    font-family: var(--font-primary);
+                    text-align: center;
+                    letter-spacing: 0;
+                    line-height: 0px;
+                    margin: 0px;
+                }
+      }
+/* 햄버거 메뉴 버튼 스타일 */
+.navbar-toggler {
+  margin-left: auto; /* 오른쪽 정렬 */
+  align-self: center; /* 세로 중앙 정렬 */
+  padding: 0.5rem; /* 버튼 클릭 영역 확보 */
+  color: rgba(255, 255, 255, 0.7);
+  background-color: transparent;
+  border: none;
+  z-index: 1050;
+}
+
+
+/* 햄버거 아이콘 색상 변경 유지 */
+.navbar-toggler-icon {
+  background-image: url("data:image/svg+xml,%3csvg xmlns='http://www.w3.org/2000/svg' fill='rgba(255, 255, 255, 0.7)' viewBox='0 0 30 30'%3e%3cpath stroke='rgba(255, 255, 255, 0.7)' stroke-linecap='round' stroke-miterlimit='10' stroke-width='2' d='M4 7h22M4 15h22M4 23h22'/%3e%3c/svg%3e");
+}
+
+.nav-drop-pf{
+  font-family: var(--font-primary);
+  font-size : 20px;
+  font-weight: 700;
+  backdrop-filter: blur(21px);
+  box-shadow: -5px -5px 250px 0px rgba(255, 255, 255, 0.02) inset;
+  border: 1px solid rgba(255, 255, 255, 0.08);
+  background: linear-gradient(159deg, rgba(255, 255, 255, 0.40) -100%, rgba(255, 255, 255, 0.04) 100%);
+  padding: 12px 20px;     /* 좌우 여백 증가 */
+  min-width: 180px;       /* 최소 너비 확보 */
+  line-height: 1.6;       /* 텍스트 간격 여유 */
+  border-radius: 12px;
+
+}
+
+/* 드롭다운 항목 스타일 */
+.dropdown-menu.nav-drop-pf .dropdown-item {
+  font-family: Pretendard, AppleSDGothicNeo, sans-serif;
+  font-size: 1.0625rem; /* 약 17px */
+  font-weight: 600;
+  color: rgba(255, 255, 255, 0.7); /* 투명한 흰색 */
+  text-align: center;
+  transition: color 0.3s ease, background-color 0.3s ease;
+}
+
+/* 호버 시 효과 */
+.dropdown-menu.nav-drop-pf .dropdown-item:hover,
+.dropdown-menu.nav-drop-pf .dropdown-item:focus {
+  color: rgba(255, 255, 255, 1); /* 완전한 흰색 */
+  background-color: rgba(255, 255, 255, 0.1); /* 약간 어두운 배경 강조 */
+}
+/* 큰 화면에서 가로 정렬 및 간격 처리 */
+@media (min-width: 992px) {
+  .navbar-nav {
+    width: 100%; /* 전체 너비 사용 */
+    justify-content: space-around; /* 균등 간격 */
+    text-align: center;
+  }
+
+  .navbar-nav .nav-item {
+    flex: 1; /* 각 항목이 동일한 너비 갖도록 */
+  }
+
+  .navbar-nav .nav-link {
+    display: block;
+    width: 100%;
+  }
+}
+
+/* 모바일 메뉴의 여백 추가 (아코디언 열릴 때 안에 내용 padding 추가) */
+@media (max-width: 991.98px) {
+  #navbarNav {
+    padding-top: 1.5rem;
+    padding-bottom: 1.5rem;
+  }
+
+  .navbar-nav .nav-item {
+    margin-bottom: 1rem;
+  }
+
+  .navbar-nav .nav-link {
+    font-size: 1.2rem;
+    font-weight: 600;
+  }
+}
+/*navvar end*/
+
+
 
 
 
@@ -458,7 +447,11 @@ img {
   }
 }
 
-
+/*about page begin*/
+.about_page{
+  display: flex;
+  justify-content: center;
+}
 
 
 
