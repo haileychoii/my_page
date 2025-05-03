@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <!-- Required meta tags -->
+    <meta charset="utf-8"/>
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no" />
+    <meta name="description" content="" />
+    <meta name="author" content="" />
+    <!-- Bootstrap CSS -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.5/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-SgOJa3DmI69IUzQ2PVdRZhwQ+dy64/BUtbMJw1MZ8t5HZApcHrRKUc4W0kG879m7" crossorigin="anonymous">
+    <link rel="stylesheet" href="//cdn.jsdelivr.net/npm/font-applesdgothicneo@1.0/all.min.css">
+    <link rel="stylesheet" href="styleguide.css" />
+    <link rel="stylesheet" href="navvar_style.css" />
+
+</head>
+<body>
+<!-- Navigation Bar -->
+<nav class="navbar nav-var fixed-top navbar-expand-lg">
+  <div class="container">
+
+
+    <!-- Mobile Toggle Button -->
+    <button class="navbar-toggler navbar-text" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav"
+      aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+      <span class="navbar-toggler-icon"></span>
+    </button>
+
+    <!-- Navbar Items -->
+    <div class="collapse navbar-collapse justify-content-end" id="navbarNav">
+      <ul class="navbar-nav ms-auto d-lg-flex align-items-center text-center">
+        <li class="nav-item"><a class="nav-link py-2" href="#home">Home</a></li>
+        <li class="nav-item"><a class="nav-link py-2" href="#about">About</a></li>
+        <li class="nav-item dropdown">
+          <a class="nav-link dropdown-toggle py-2" href="#portfolios" role="button" data-bs-toggle="dropdown"
+            aria-expanded="false">Portfolios</a>
+          <ul class="dropdown-menu nav-drop-pf text-center">
+            <li><a class="dropdown-item" href="#what_ive_done">What I've done</a></li>
+            <li><a class="dropdown-item" href="#main_project">Main Project</a></li>
+          </ul>
+        </li>
+        <li class="nav-item"><a class="nav-link py-2" href="#blog">Blog</a></li>
+        <li class="nav-item"><a class="nav-link py-2" href="#contact">Contact</a></li>
+      </ul>
+    </div>
+  </div>
+</nav>
+
+<script>
+  function setBodyPaddingForNavbar() {
+    const navbar = document.querySelector('.nav-var');
+    if (navbar) {
+      const navHeight = navbar.offsetHeight;
+      document.body.style.paddingTop = navHeight + 'px';
+    }
+  }
+
+  // 최초 로드 시 실행
+  window.addEventListener('DOMContentLoaded', setBodyPaddingForNavbar);
+
+  // 창 크기 변경 시 다시 실행 (반응형 대응)
+  window.addEventListener('resize', setBodyPaddingForNavbar);
+</script>
+<!--navigation bar done-->
+</body>
+</html>

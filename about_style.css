@@ -1,0 +1,73 @@
+@media (max-width: 768px) {
+    #about{
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      flex-direction: column;
+      padding: 10px !important;
+      border: 5px !important;
+  }
+}
+
+/*about page의 배경*/
+#about{
+  border-radius: 19px;
+  border: 1px solid rgba(255, 255, 255, 0.08);
+  background: linear-gradient(159deg, rgba(255, 255, 255, 0.40) -100%, rgba(255, 255, 255, 0.04) 100%);
+  box-shadow: -5px -5px 250px 0px rgba(255, 255, 255, 0.02) inset;
+  backdrop-filter: blur(21px);
+}
+/*about page의 main loopy, text start*/
+
+/*about page의 루피 img*/
+.main_image{
+  width: 25%;
+}
+
+.con_main_text{
+  width: 75%;
+}
+
+.main_text{
+  margin-top : 60px;
+  max-font-size: 55px;
+  min-font-size: 32px;
+  text-shadow: 0px 4px 4px #00000040;
+  font-family: var(--font-main);
+  font-size: var(--font-about-font-size);
+  font-weight: 700;
+  text-align: center;
+  letter-spacing: var(--font-about-letter-spacing);
+  line-height: var(--font-about-line-height);
+  font-style: var(--font-about-font-style);
+  color: var(--basicwhite);
+  margin-left: 20px; /* Add some left margin to separate text from the image */
+}
+
+.yellow_txt{
+  color: var(--basicyellow);
+}
+
+.white_txt{
+  color: var(--basicwhite);
+}
+
+@media (max-width: 480px){
+    .main_text{
+      position: relative;
+      margin-bottom: 50px;
+      margin-top: 20px;
+      font-size: 48px !important;
+      line-height: 60px !important;
+
+  }
+
+  .main_image {
+      position: relative !important;
+      width: auto !important;
+      height: auto;
+      justify-content: center !important;
+
+  }
+}
+/*about page의 main loopy, text end*/

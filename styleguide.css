@@ -1,8 +1,8 @@
-
 :root {
   --basicwhite: rgba(255, 255, 255, 1);
   --basicyellow: rgba(253, 184, 39, 1);
-  --font-primary: Pretendard, AppleSDGothicNeo, sans-serif;
+
+  --font-main: Pretendard, Apple SD Gothic Neo, sans-serif;
   --font-home-font-weight: 900;
   --font-home-font-size: 64px;
   --font-home-letter-spacing: 0px;

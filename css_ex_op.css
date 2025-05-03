@@ -59,7 +59,7 @@ body {
       justify-content: center;
       align-items: center;
       flex-direction: column;
-      padding: 10px !important
+      padding: 10px !important;
       border: 5px !important;
   }
 
@@ -87,7 +87,6 @@ body {
 
 .full-bg {
   background-color: #000000;
-  overflow-scrolling: auto;
   overflow: hidden;
   width: 100%;
   justify-content: space-evenly;
@@ -106,7 +105,6 @@ body {
   display: flex;
   flex-direction: row;
   align-items: center;
-  overflow-scrolling: auto;
 }
 
 
@@ -171,7 +169,7 @@ background-position: 50% 50%;
   height: 154px;
   top: 33px;
   left: 0;
-  font-family: var(--font-primary), Pretendard;
+  font-family: var(--font-main);
   font-weight: var(--font-home-font-weight);
   text-shadow: 0px 4px 4px #00000040;
   color: var(--basicwhite);
@@ -180,8 +178,6 @@ background-position: 50% 50%;
   letter-spacing: var(--font-home-letter-spacing);
   line-height: var(--font-home-line-height);
   font-style: var(--font-home-font-style);
-
-
 }
 
 @media (max-width: 480px) {
@@ -190,10 +186,18 @@ background-position: 50% 50%;
         }
       }
 
-.text_mm span{
+.text_mm span[data-delay = '1']{
   opacity: 0;
   animation: reveal 0.5s forwards var(--d);
+  animation-delay: 0.1s;
 }
+
+.text_mm span[data-delay = '2']{
+  opacity: 0;
+  animation: reveal 0.5s forwards var(--d);
+  animation-delay: 0.2s;
+}
+
 
 @keyframes reveal {
   from {
@@ -220,15 +224,21 @@ background-position: 50% 50%;
   bottom: -120px;
   left: 80px;
   text-shadow: 0px 4px 4px #00000040;
-  font-family: var(--font-primary), Pretendard;
+  font-family: var(--font-main);
   font-weight: var(--font-home-body-font-weight);
   color: var(--basicwhite);
   font-size: var(--font-home-body-font-size);
   text-align: center;
   letter-spacing: var(--font-home-body-letter-spacing);
-  /*line-height: var(--font-home-body-line-height);*/
   line-height: 1.7em;
   font-style: var(--font-home-body-font-style);
+}
+
+@media (max-width: 480px) {
+  .web_bg.home-text-body{
+    position: relative;
+    text-align: center;
+  }
 }
 
 
@@ -245,7 +255,7 @@ background-position: 50% 50%;
     }
 
     .text-wrapper-2 {
-      font-family: var(--font-primary), Pretendard;
+      font-family: var(--font-main), Pretendard;
       font-weight: 600;
       color: #000000;
       font-size: 18px;
@@ -309,7 +319,7 @@ background-position: 50% 50%;
     .navbar-text {
                     font-weight: 700;
                     color: var(--basicwhite);
-                    font-family: var(--font-primary);
+                    font-family: var(--font-main);
                     text-align: center;
                     letter-spacing: 0;
                     line-height: 0px;
@@ -334,7 +344,7 @@ background-position: 50% 50%;
 }
 
 .nav-drop-pf{
-  font-family: var(--font-primary);
+  font-family: var(--font-main);
   font-size : 20px;
   font-weight: 700;
   backdrop-filter: blur(21px);
@@ -350,7 +360,7 @@ background-position: 50% 50%;
 
 /* 드롭다운 항목 스타일 */
 .dropdown-menu.nav-drop-pf .dropdown-item {
-  font-family: Pretendard, AppleSDGothicNeo, sans-serif;
+  font-family: var(--font-main);
   font-size: 1.0625rem; /* 약 17px */
   font-weight: 600;
   color: rgba(255, 255, 255, 0.7); /* 투명한 흰색 */
@@ -405,14 +415,17 @@ background-position: 50% 50%;
 
 
 /*my cat + carousel*/
-.my_cat{
-  font-family: var(--font-primary);
+.mycat {
+
+}
+.mycat_text{
+  font-family: var(--font-main);
   font-size: 80px;
   font-weight: 900;
   line-height: 1.1em;
   color: var(--basicwhite);
   text-align: center;
-  margin: 10px 20px;
+
 
 }
 
@@ -468,7 +481,7 @@ img {
   max-font-size: 55px;
   min-font-size: 32px;
   text-shadow: 0px 4px 4px #00000040;
-  font-family: var(--font-primary);
+  font-family: var(--font-main);
   font-size: var(--font-about-font-size);
   font-weight: 700;
   text-align: center;
@@ -502,7 +515,13 @@ img {
       width: auto !important;
       height: auto;
       justify-content: center !important;
+      display: block !important;
+      margin: 0 auto;
+  }
 
+  .con_main_text{
+    width: 100%;
+    text-align: center;
   }
 }
 /*about page의 main loopy, text end*/
@@ -516,7 +535,7 @@ img {
 }
 
 .section-title {
-  font-family: var(--font-primary);
+  font-family: var(--font-main);
   font-size: 5rem;
   font-weight: bold;
   line-height: 1.1;
@@ -536,7 +555,7 @@ img {
 
 /* 카드 타이틀 */
 .card-title {
-  font-family: var(--font-primary);
+  font-family: var(--font-main);
   font-size: 1.5rem;
   line-height: 1;
   font-weight: 700;
@@ -544,7 +563,7 @@ img {
 }
 
 .card-text {
-  font-family: var(--font-primary);
+  font-family: var(--font-main);
   font-size: 20px;
   line-height: 1.5;
   color: var(--basicwhite);
@@ -552,7 +571,7 @@ img {
 }
 
 .card-text-long {
-  font-family: var(--font-primary);
+  font-family: var(--font-main);
   font-size: 13px;
   line-height: 1.5;
   color: var(--basicwhite);
@@ -575,7 +594,7 @@ img {
 
 .pf-button {
   font-size: 15px;
-  font-family: var(--font-primary);
+  font-family: var(--font-main);
   font-weight: 700;
   color: #000000;
   margin-top: 7px;
@@ -593,7 +612,7 @@ img {
 
 .card_list{
   font-size: 13px;
-  font-family: var(--font-primary);
+  font-family: var(--font-main);
   font-weight: 500;
   border-radius: 10px;
   backdrop-filter: blur(21px);
@@ -624,7 +643,7 @@ background-position: 50% 50%;}
 }
 
 .contact_main{
-  font-family: var(--font-primary);
+  font-family: var(--font-main);
   font-weight: 700;
   color: var(--basicwhite);
   font-size: 48px;
@@ -632,7 +651,7 @@ background-position: 50% 50%;}
 }
 
 .contact_body{
-  font-family: var(--font-primary);
+  font-family: var(--font-main);
   font-weight: 600;
   color: var(--basicwhite);
   font-size: 16px;

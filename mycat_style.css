@@ -1,0 +1,31 @@
+/*my cat + carousel*/
+.my_cat{
+  font-family: var(--font-main);
+  font-size: 5rem;
+  font-weight: 900;
+  line-height: 1.1em;
+  color: var(--basicwhite);
+  text-align: left;
+  margin: 10px 20px;
+
+}
+
+/* carousel 크기 조정 */
+#carouselExampleAutoplaying {
+  max-width: 600px; /* 적절한 크기로 제한 */
+  margin: 0 auto; /* 가운데 정렬 */
+}
+
+#carouselExampleAutoplaying .carousel-item
+img {
+  height: auto;
+  max-height: 350px; /* 이미지 최대 높이 제한 */
+  object-fit: contain;
+  width: 100%;
+}
+
+@media (max-width: 480px){
+  .my_cat{
+    font-size: 50px;
+  }
+}
