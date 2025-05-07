@@ -1,0 +1,122 @@
+@media (max-width: 768px) {
+     .section-title{
+    font-size: 40px;
+  }
+
+  .card-title{
+    font-size: 3rem;
+  }
+
+  .card-text{
+      font-size: 18px;
+  }
+
+  .card-text-long{
+    font-size: 12px;
+  }
+}
+
+
+/*portfolios page begins*/
+.portfolios {
+  margin-top: 120px;
+  width: 100%;
+}
+
+.section-title {
+  font-family: var(--font-main);
+  font-size: 5rem;
+  font-weight: bold;
+  line-height: 1.1;
+  text-align: left;
+  margin-bottom: 10px;
+  margin-top: 80px;
+  color: var(--basicwhite);
+}
+
+
+/* 카드 스타일 */
+
+
+.pf_card:hover {
+  transform: translateY(-5px);
+}
+
+/* 카드 타이틀 */
+.card-title {
+  font-family: var(--font-main);
+  font-size: 1.5rem;
+  line-height: 1;
+  font-weight: 700;
+  color: var(--basicwhite);
+}
+
+.card-text {
+  font-family: var(--font-main);
+  font-size: 20px;
+  line-height: 1.5;
+  color: var(--basicwhite);
+  margin-top: 30px;
+}
+
+.card-text-long {
+  font-family: var(--font-main);
+  font-size: 13px;
+  line-height: 1.5;
+  color: var(--basicwhite);
+  margin-top: 20px;
+}
+
+.pf_card {
+  border: 1px solid rgba(255, 255, 255, 0.08);
+  height: 250px;
+  border-radius: 1rem;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+  transition: transform 0.2s ease-in-out;
+  background: linear-gradient(159deg, rgba(255, 255, 255, 0.40) -100%, rgba(255, 255, 255, 0.04) 100%);
+  /*box-shadow: -5px -5px 250px 0px rgba(255, 255, 255, 0.02) inset;*/
+  backdrop-filter: blur(21px);
+
+}
+
+
+
+.pf-button {
+  font-size: 15px;
+  font-family: var(--font-main);
+  font-weight: 700;
+  color: #000000;
+  margin-top: 7px;
+  border: 1px solid rgba(255, 255, 255, 0.08);
+  background: #ea868f;
+  box-shadow: -5px -5px 250px 0px rgba(255, 255, 255, 0.02) inset;
+  backdrop-filter: blur(21px);
+}
+
+
+.card_img{
+  height: 130px;
+  width: auto;
+}
+
+.card_list{
+  font-size: 13px;
+  font-family: var(--font-main);
+  font-weight: 500;
+  border-radius: 10px;
+  backdrop-filter: blur(21px);
+  border: 1px solid rgba(255, 255, 255, 0.08);
+  box-shadow: -5px -5px 250px 0px rgba(255, 255, 255, 0.02) inset;
+  background: linear-gradient(159deg, rgba(255, 255, 255, 0.40) -100%, rgba(255, 255, 255, 0.04) 100%);
+
+}
+
+.box .emoji-hh {
+position: absolute;
+width: 150px;
+height: 150px;
+top: 0;
+left: 490px;
+background-image: url(./assets_op/hh.png);
+background-size: cover;
+background-position: 50% 50%;}
