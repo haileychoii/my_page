@@ -63,9 +63,15 @@ body {
       display: flex;
       justify-content: center;
       align-items: center;
-      flex-direction: column;
+      margin-top: 60px !important;
       padding: 10px !important;
       border: 5px !important;
+  }
+
+  .main_text{
+    position: relative;
+    margin-top: 20px !important;
+    font-size: 52px !important;
   }
 
 
@@ -426,14 +432,12 @@ background-position: 50% 50%;
 .mycat_text{
   font-family: var(--font-main);
   font-size: 5rem;
-  font-weight: bold;
+  font-weight: 900;
   line-height: 1.1;
   text-align: left;
   margin-bottom: 10px;
   margin-top: 80px;
   color: var(--basicwhite);
-
-
 }
 
 /* carousel 크기 조정 */
@@ -466,6 +470,8 @@ img {
 
 /*about page의 배경*/
 #about{
+  display: flex;
+  flex-direction: row;
   border-radius: 19px;
   border: 1px solid rgba(255, 255, 255, 0.08);
   background: linear-gradient(159deg, rgba(255, 255, 255, 0.40) -100%, rgba(255, 255, 255, 0.04) 100%);
@@ -477,18 +483,20 @@ img {
 /*about page의 루피 img*/
 .main_image{
   width: 25%;
+
 }
 
 .con_main_text{
   width: 75%;
+  justify-content: right;
+
 }
 
 .main_text{
   margin-top : 60px;
-
   text-shadow: 0px 4px 4px #00000040;
   font-family: var(--font-main);
-  font-size: clamp(32px, 5vw, 55px);
+  font-size: 3.5rem;
   font-weight: 700;
   text-align: center;
   letter-spacing: var(--font-about-letter-spacing);
@@ -507,12 +515,16 @@ img {
 }
 
 @media (max-width: 480px){
+    #about{
+      flex-direction: column;
+    }
+
     .main_text{
       position: relative;
       margin-bottom: 50px;
       margin-top: 20px;
-      font-size: 48px !important;
-      line-height: 60px !important;
+      font-size: 43px !important;
+      line-height: 58px !important;
 
   }
 
