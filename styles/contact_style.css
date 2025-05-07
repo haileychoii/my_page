@@ -1,0 +1,116 @@
+.box .emoji-hh {
+position: absolute;
+width: 150px;
+height: 150px;
+top: 0;
+left: 490px;
+background-image: url(./assets_op/hh.png);
+background-size: cover;
+background-position: 50% 50%;}
+
+#contact {
+  display: flex;
+  flex-direction: column;
+  position: relative;
+  padding: 3rem 1rem;
+  gap: 2rem;
+}
+
+.contact_con {
+  position: relative;
+  width: 100%;
+  min-height: 100vh;
+}
+
+.contact_con > div {
+  width: 100%;
+  height: 100%;
+  position: absolute;
+}
+
+/* 각 이미지 공통 스타일 */
+.contact_con img {
+  max-width: 100%;
+  height: auto;
+  position: absolute;
+}
+
+/* 기존 위치 유지 */
+.contact_con img:nth-child(1) {
+  width: 277px;
+  height: 280px;
+  left: 0px;
+  top: 253px;
+}
+
+.contact_con img:nth-child(2) {
+  width: 119px;
+  height: 120px;
+  left: 0px;
+  top: 149px;
+}
+
+.contact_con img:nth-child(3) {
+  width: 98px;
+  height: 200px;
+  left: 165px;
+  top: 75px;
+}
+
+.contact_con img:nth-child(4) {
+  width: 142px;
+  height: 120px;
+  left: 4px;
+  top: 0px;
+}
+
+.contact_main {
+  font-family: var(--font-main);
+  font-weight: 700;
+  color: var(--basicwhite);
+  font-size: 48px;
+  letter-spacing: 0;
+}
+
+.contact_body {
+  font-family: var(--font-main);
+  font-weight: 600;
+  color: var(--basicwhite);
+  font-size: 16px;
+  letter-spacing: 0;
+  word-wrap: break-word;
+}
+
+/* ========== 반응형 처리 ========== */
+@media screen and (max-width: 768px) {
+  .contact_main {
+    font-size: 32px;
+    text-align: center;
+  }
+
+  .contact_body {
+    font-size: 14px;
+    text-align: center;
+  }
+
+  .contact_con {
+    min-height: auto;
+    height: 400px;
+  }
+
+  .contact_con img {
+    transform: scale(0.6);
+    left: auto !important;
+    right: auto !important;
+    margin: 0 auto;
+  }
+
+  /* 이미지들을 수직 정렬 */
+  .contact_con > div {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 0.5rem;
+    position: static;
+  }
+}
