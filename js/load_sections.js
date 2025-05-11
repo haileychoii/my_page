@@ -1,21 +1,21 @@
 document.addEventListener("DOMContentLoaded", () => {
-  fetch('nav.html')
+  fetch('../sections/navvar.html')
     .then(res => res.text())
     .then(data => document.getElementById('nav-container').innerHTML = data);
 
-  fetch('about.html')
+  fetch('../sections/about.html')
     .then(res => res.text())
     .then(data => document.getElementById('about-container').innerHTML = data);
 
-  fetch('portfolio.html')
+  fetch('../sections/portfolios.html')
     .then(res => res.text())
     .then(data => document.getElementById('portfolio-container').innerHTML = data);
 
-  fetch('contact.html')
+  fetch('../sections/contact.html')
     .then(res => res.text())
     .then(data => document.getElementById('contact-container').innerHTML = data);
 
-  fetch('footer.html')
+  fetch('../sections/footer.html')
     .then(res => res.text())
     .then(data => document.getElementById('footer-container').innerHTML = data);
 });

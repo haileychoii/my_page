@@ -1,1 +1,6 @@
-@import
+body{
+    background-image: url('assets_op/cosmos1.jpg');
+    background-repeat: no-repeat;
+    background-size: cover;
+
+}

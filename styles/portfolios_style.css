@@ -76,7 +76,6 @@
   background: linear-gradient(159deg, rgba(255, 255, 255, 0.40) -100%, rgba(255, 255, 255, 0.04) 100%);
   /*box-shadow: -5px -5px 250px 0px rgba(255, 255, 255, 0.02) inset;*/
   backdrop-filter: blur(21px);
-
 }
 
 
@@ -111,12 +110,3 @@
 
 }
 
-.box .emoji-hh {
-position: absolute;
-width: 150px;
-height: 150px;
-top: 0;
-left: 490px;
-background-image: url(./assets_op/hh.png);
-background-size: cover;
-background-position: 50% 50%;}
