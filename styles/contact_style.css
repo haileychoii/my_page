@@ -1,129 +1,3 @@
-/*body{*/
-/*  background-color: black;*/
-/*  background-size: cover;*/
-/*}*/
-/*#contact {*/
-/*  display: flex;*/
-/*  flex-direction: row;*/
-/*  position: relative;*/
-/*  padding: 3rem 1rem;*/
-/*  gap: 2rem;*/
-/*}*/
-
-/*.contact_con {*/
-/*  position: relative;*/
-/*}*/
-
-/*!*.contact_con > div {*!*/
-/*!*  width: 100%;*!*/
-/*!*  height: 100%;*!*/
-/*!*  position: absolute;*!*/
-/*!*}*!*/
-
-/*!* 각 이미지 공통 스타일 *!*/
-/*.contact_con img {*/
-/*  max-width: 100%;*/
-/*  height: auto;*/
-/*  position: absolute;*/
-/*}*/
-
-/*!* 기존 위치 유지 *!*/
-/*.contact_con img:nth-child(1) {*/
-/*  width: 277px;*/
-/*  height: 280px;*/
-/*  left: 0px;*/
-/*  top: 253px;*/
-/*}*/
-
-/*.contact_con img:nth-child(2) {*/
-/*  width: 119px;*/
-/*  height: 120px;*/
-/*  left: 0px;*/
-/*  top: 149px;*/
-/*}*/
-
-/*.contact_con img:nth-child(3) {*/
-/*  width: 98px;*/
-/*  height: 200px;*/
-/*  left: 165px;*/
-/*  top: 75px;*/
-/*}*/
-
-/*.contact_con img:nth-child(4) {*/
-/*  width: 142px;*/
-/*  height: 120px;*/
-/*  left: 4px;*/
-/*  top: 0px;*/
-/*}*/
-
-/*.contact_text{*/
-/*  display: flex;*/
-/*  flex-direction: column;*/
-/*}*/
-
-/*.contact_main {*/
-/*  font-family: var(--font-main);*/
-/*  font-weight: 700;*/
-/*  color: var(--basicwhite);*/
-/*  font-size: var(--font-contact-title-font-size);*/
-/*  line-height: var(--font-contact-title-line-height);*/
-/*  letter-spacing: 0;*/
-/*}*/
-
-/*.contact_body {*/
-/*  font-family: var(--font-main);*/
-/*  font-weight: 600;*/
-/*  color: var(--basicwhite);*/
-/*  font-size: 16px;*/
-/*  letter-spacing: 0;*/
-/*  word-wrap: break-word;*/
-/*}*/
-
-/*!* ========== 반응형 처리 ========== *!*/
-/*@media screen and (max-width: 768px) {*/
-/*  .contact_main {*/
-/*    font-size: 32px;*/
-/*    text-align: center;*/
-/*  }*/
-
-/*  .contact_body {*/
-/*    font-size: 14px;*/
-/*    text-align: center;*/
-/*  }*/
-
-/*  .contact_con {*/
-/*    min-height: auto;*/
-/*    height: 400px;*/
-/*  }*/
-
-/*  .contact_con img {*/
-/*    transform: scale(0.6);*/
-/*    left: auto !important;*/
-/*    right: auto !important;*/
-/*    margin: 0 auto;*/
-/*  }*/
-
-/*  !* 이미지들을 수직 정렬 *!*/
-/*  .contact_con > div {*/
-/*    display: flex;*/
-/*    flex-direction: column;*/
-/*    align-items: center;*/
-/*    gap: 0.5rem;*/
-/*    position: static;*/
-/*  }*/
-
-/*}*/
-
-/*@media screen and (max-width: 480px) {*/
-/*  .contact_con img {*/
-/*    display: none;*/
-/*  }*/
-
-/*  .contact_main {*/
-/*    font-size: 32px;*/
-/*    text-align: center;*/
-/*  }*/
-/*}*/
 
 body {
   margin: 0;
@@ -167,6 +41,7 @@ body {
   flex-direction: column;
   justify-content: center;
   padding: 1rem;
+  color: var(--basicwhite);
   animation: fadeInUp 1s ease-out;
 }
 
@@ -187,38 +62,42 @@ body {
 /* ====== 반응형 처리 ====== */
 @media (max-width: 768px) {
   #contact {
-    flex-direction: column;
-    display: flex;
-
+    flex-direction: row;
+    flex-wrap: nowrap;
+    justify-content: center;
     align-items: center;
     padding: 2rem 1rem;
   }
 
   .contact-con {
+    width: 50%;
     position: relative;
-    width: 60%;
-    height: 320px;
-    display: flex;
-    flex-direction: row;
-    justify-content: center;
-    align-items: flex-start;
-    flex-wrap: wrap;
-    gap: 1rem;
+    min-height: 500px; /* 기존보다 높이 증가 */
+    overflow: visible; /* 잘리지 않게 */
   }
 
   .contact-con img {
-    position: static;
+    position: absolute;
     transform: scale(0.7);
+    transform-origin: top left; /* 기준점 명시 */
   }
 
+  .contact-con img.img-3 {
+    left: 165px; /* ← 기존보다 왼쪽으로 이동 */
+  }
+
+
   .contact-text {
-    width: 100%;
-    text-align: center;
+    width: 50%;
+    text-align: left;
     padding: 1rem;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
   }
 
   .contact-title {
-    font-size: 32px;
+    font-size: 28px;
   }
 
   .contact-body p {
@@ -226,16 +105,38 @@ body {
   }
 }
 
+
+/* 모바일 대응 (≤480px) */
 @media (max-width: 480px) {
+  #contact {
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    padding: 2rem 1rem;
+  }
+
   .contact-con {
-    display: none;
+    display: none; /* 이미지 숨김 */
+  }
+
+  .contact-text {
+    width: 100%;
+    text-align: center; /* 가운데 정렬 */
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
   }
 
   .contact-title {
-    font-size: 28px;
+    font-size: 24px;
+  }
+
+  .contact-body p {
+    font-size: 13px;
+    text-align: center;
   }
 }
-
 /* 애니메이션 */
 @keyframes fadeInUp {
   from {
