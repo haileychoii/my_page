@@ -16,6 +16,32 @@
   }
 }
 
+@media (max-width: 480px) {
+  .pf_card{
+    text-align: left;
+    width: 401.52px !important;
+    height: 385px !important;
+    border-radius: 19px;
+    object-fit: cover;
+  }
+
+  .card-title{
+    font-size: 16px !important;
+    display: inline-block;
+    left: 23.04px !important;
+    top: 48% !important;
+  }
+
+  .card-text{
+    font-size: 13px !important;
+    display: inline-block;
+    left: 23.04px !important;
+    top: 52% !important;
+    width: 310px !important;
+
+  }
+}
+
 
 /*portfolios page begins*/
 .portfolios {
