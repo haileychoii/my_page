@@ -5,7 +5,7 @@ body {
 
 
 @media (max-width: 768px) {
-  .web_bg .main_group {
+  .web_bg .main-group {
     width: 100% !important;
     margin-top: 60px !important; /* Adjust margin-top as needed */
   }
@@ -37,7 +37,7 @@ body {
     transform: translateX(-50%) !important;
   }
 
-  .web_bg .text_mm {
+  .web_bg .text-mm {
     width: 100% !important;
     height: auto !important;
     top: 80px !important; /* Adjust top position as needed */
@@ -59,7 +59,7 @@ body {
     display: inline-flex !important;
   }
 
-  #about{
+  #about-section{
       display: flex;
       justify-content: center;
       align-items: center;
@@ -68,7 +68,7 @@ body {
       border: 5px !important;
   }
 
-  .main_text{
+  .main-text{
     position: relative;
     margin-top: 20px !important;
     font-size: 52px !important;
@@ -120,7 +120,7 @@ body {
 
 
 
-.web_bg .main_group {
+.web_bg .main-group {
   position: relative;
   width: 983px;
   height: 388px;
@@ -174,7 +174,7 @@ background-size: cover;
 background-position: 50% 50%;
 }
 
-.web_bg .text_mm {
+.web_bg .text-mm {
   position: absolute;
   width: 745px;
   height: 154px;
@@ -192,18 +192,18 @@ background-position: 50% 50%;
 }
 
 @media (max-width: 480px) {
-        .web_bg .text_mm  {
+        .web_bg .text-mm  {
           font-size: 3.5rem;
         }
       }
 
-.text_mm span[data-delay = '1']{
+.text-mm span[data-delay = '1']{
   opacity: 0;
   animation: reveal 0.5s forwards var(--d);
   animation-delay: 0.1s;
 }
 
-.text_mm span[data-delay = '2']{
+.text-mm span[data-delay = '2']{
   opacity: 0;
   animation: reveal 0.5s forwards var(--d);
   animation-delay: 0.2s;
@@ -252,17 +252,21 @@ background-position: 50% 50%;
   }
 }
 
+.button-style {
+  -webkit-backdrop-filter: blur(20px);
+  border: 1px solid rgba(255, 255, 255, 0.08);
+  background: linear-gradient(159deg, rgba(255, 255, 255, 0.40) -100%, rgba(255, 255, 255, 0.04) 100%);
+  box-shadow: -5px -5px 250px 0px rgba(255, 255, 255, 0.02) inset;
+  backdrop-filter: blur(21px);
+}
+
 
 
 /*home buttons*/
 .about-me {
       background: linear-gradient(100deg, #fbf7b8, #facfd9);
-      -webkit-backdrop-filter: blur(20px);
-      backdrop-filter: blur(20px);
-      box-shadow: 20px 20px 50px 0 rgba(0, 0, 0, 0.37);
-      border-top: 2px solid rgba(255, 255, 255, 0.17);
-      border-right: 2px solid rgba(255, 255, 255, 0.15);
       border-radius: 8px;
+      @extend .button-style;
     }
 
     .text-wrapper-2 {
@@ -278,11 +282,7 @@ background-position: 50% 50%;
 
     .button-portfolios {
       background: linear-gradient(135deg, #d2feff, #f6bee5);
-      -webkit-backdrop-filter: blur(20px);
-      backdrop-filter: blur(20px);
-      box-shadow: 20px 20px 50px 0 rgba(0, 0, 0, 0.37);
-      border-top: 2px solid rgba(255, 255, 255, 0.17);
-      border-right: 2px solid rgba(255, 255, 255, 0.15);
+      @extend .button-style;
       border-radius: 8px;
     }
 
@@ -325,9 +325,8 @@ background-position: 50% 50%;
   color: rgba(255, 255, 255, 1); /* 완전한 흰색 */
 }
 
-.navbar-toggler {
 
-    .navbar-text {
+.navbar-text {
                     font-weight: 700;
                     color: var(--basicwhite);
                     font-family: var(--font-main);
@@ -335,8 +334,8 @@ background-position: 50% 50%;
                     letter-spacing: 0;
                     line-height: 0px;
                     margin: 0px;
-                }
-      }
+}
+
 /* 햄버거 메뉴 버튼 스타일 */
 .navbar-toggler {
   margin-left: auto; /* 오른쪽 정렬 */
@@ -370,7 +369,7 @@ background-position: 50% 50%;
 }
 
 /* 드롭다운 항목 스타일 */
-.dropdown-menu.nav-drop-pf .dropdown-item {
+.dropdown-menu .nav-drop-pf .dropdown-item {
   font-family: var(--font-main);
   font-size: 1.0625rem; /* 약 17px */
   font-weight: 600;
@@ -380,8 +379,8 @@ background-position: 50% 50%;
 }
 
 /* 호버 시 효과 */
-.dropdown-menu.nav-drop-pf .dropdown-item:hover,
-.dropdown-menu.nav-drop-pf .dropdown-item:focus {
+.dropdown-menu .nav-drop-pf .dropdown-item:hover,
+.dropdown-menu .nav-drop-pf .dropdown-item:focus {
   color: rgba(255, 255, 255, 1); /* 완전한 흰색 */
   background-color: rgba(255, 255, 255, 0.1); /* 약간 어두운 배경 강조 */
 }
@@ -469,7 +468,7 @@ img {
 
 
 /*about page의 배경*/
-#about{
+#about-section{
   display: flex;
   flex-direction: row;
   border-radius: 19px;
@@ -481,18 +480,18 @@ img {
 /*about page의 main loopy, text start*/
 
 /*about page의 루피 img*/
-.main_image{
+.main-image{
   width: 25%;
 
 }
 
-.con_main_text{
+.con-main-text{
   width: 75%;
   justify-content: right;
 
 }
 
-.main_text{
+.main-text{
   margin-top : 60px;
   text-shadow: 0px 4px 4px #00000040;
   font-family: var(--font-main);
@@ -515,11 +514,11 @@ img {
 }
 
 @media (max-width: 480px){
-    #about{
+    #about-section{
       flex-direction: column;
     }
 
-    .main_text{
+    .main-text{
       position: relative;
       margin-bottom: 50px;
       margin-top: 20px;
@@ -528,7 +527,7 @@ img {
 
   }
 
-  .main_image {
+  .main-image {
       position: relative !important;
       width: auto !important;
       height: auto;
@@ -537,7 +536,7 @@ img {
       margin: 0 auto;
   }
 
-  .con_main_text{
+  .con-main-text{
     width: 100%;
     text-align: center;
   }
@@ -567,7 +566,7 @@ img {
 /* 카드 스타일 */
 
 
-.pf_card:hover {
+.pf-card:hover {
   transform: translateY(-5px);
 }
 
@@ -596,7 +595,7 @@ img {
   margin-top: 20px;
 }
 
-.pf_card {
+.pf-card {
   border: 1px solid rgba(255, 255, 255, 0.08);
   height: 250px;
   border-radius: 1rem;
@@ -623,12 +622,12 @@ img {
 }
 
 
-.card_img{
+.card-img{
   height: 130px;
   width: auto;
 }
 
-.card_list{
+.card-list{
   font-size: 13px;
   font-family: var(--font-main);
   font-weight: 500;
