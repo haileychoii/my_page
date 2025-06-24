@@ -25,7 +25,22 @@
 
   <!-- 스크립트 -->
   <script src="js/load_sections.js"></script>
+  <script>
+  // 외부 클릭 시 navbar 닫기
+  document.addEventListener('click', function(event) {
+    const navbar = document.getElementById('navbarNav');
+    const toggle = document.querySelector('.navbar-toggler');
 
+    if (
+      navbar.classList.contains('show') &&
+      !navbar.contains(event.target) &&
+      !toggle.contains(event.target)
+    ) {
+      const bsCollapse = bootstrap.Collapse.getInstance(navbar);
+      bsCollapse.hide();
+    }
+  });
+  </script>
 
 </body>
 <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.8/dist/umd/popper.min.js" integrity="sha384-I7E8VVD/ismYTF4hNIPjVp/Zjvgyol6VFvRkX/vR+Vc4jQkC+hVqc2pM8ODewa9r" crossorigin="anonymous"></script>
