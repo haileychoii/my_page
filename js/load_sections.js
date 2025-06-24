@@ -3,6 +3,10 @@ document.addEventListener("DOMContentLoaded", () => {
     .then(res => res.text())
     .then(data => document.getElementById('nav-container').innerHTML = data);
 
+  fetch('../sections/home.html')
+    .then(res => res.text())
+    .then(data => document.getElementById('home-container').innerHTML = data);
+
   fetch('../sections/about.html')
     .then(res => res.text())
     .then(data => document.getElementById('about-container').innerHTML = data);

@@ -72,7 +72,7 @@
   height: 320px;
   top: 0;
   left: 0;
-  background-image: url(assets_op/cobby.png);
+  background-image: url(../assets_op/cobby.png);
   background-size: cover;
   background-position: 50% 50%;
 }
@@ -109,6 +109,8 @@ background-image: url(../assets_op/hh.png);
 background-size: cover;
 background-position: 50% 50%;
 }
+
+
 
 .web_bg .text_mm {
   position: absolute;
@@ -217,5 +219,6 @@ background-position: 50% 50%;
       border-right: 2px solid rgba(255, 255, 255, 0.15);
       border-radius: 8px;
     }
+
 
 /*home buttons end*/
