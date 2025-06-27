@@ -72,7 +72,7 @@
   height: 320px;
   top: 0;
   left: 0;
-  background-image: url(../assets_op/cobby.png);
+  background-image: url(/assets_op/cobby.png);
   background-size: cover;
   background-position: 50% 50%;
 }
@@ -83,7 +83,7 @@
   height: 200px;
   top: 150px;
   right: 0px;
-  background-image: url(../assets_op/cobby2.png);
+  background-image: url(/assets_op/cobby2.png);
   background-size: cover;
   background-position: 50% 50%;
 }
@@ -105,7 +105,7 @@ width: 150px;
 height: 150px;
 top: 0;
 left: 490px;
-background-image: url(../assets_op/hh.png);
+background-image: url(/assets_op/hh.png);
 background-size: cover;
 background-position: 50% 50%;
 }

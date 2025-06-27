@@ -1,109 +1,14 @@
-@media (max-width: 768px) {
-     .section-title{
-    font-size: 40px;
-  }
-
-  .card-title{
-    font-size: 3rem;
-  }
-
-  .card-text{
-      font-size: 18px;
-
-  }
-
-  .card-text-long{
-    font-size: 12px;
-
-  }
+#portfolios {
+  margin-top: 130px;
+  margin-bottom: 20px;
 }
 
-@media (max-width: 480px) {
-  .pf-card{
-    text-align: left;
-    width: 401.52px !important;
-    height: 385px !important;
-    border-radius: 19px;
-    object-fit: cover;
-  }
-
-  .card-title{
-    font-size: 16px !important;
-    display: inline-block;
-    left: 23.04px !important;
-    top: 48% !important;
-  }
-
-  .card-text{
-    font-size: 13px !important;
-    display: inline-block;
-    left: 23.04px !important;
-    top: 52% !important;
-    width: 310px !important;
-
-  }
-}
-
-/*portfolios page begins*/
-body {
-  font-family: var(--font-main);
-  background-color: #111111;
-}
-.portfolios {
-  margin-top: 120px;
-  width: 100%;
-}
-
-.section-title {
-  font-family: var(--font-main);
-  font-size: 4.5rem;
-  font-weight: bold;
-  line-height: 1.1;
-  text-align: left;
-  margin-bottom: 10px;
-  margin-top: 80px;
-  color: var(--basicwhite);
-}
-
-
-/* 카드 스타일 */
-
-
-.pf-card:hover {
-  transform: translateY(-5px);
-}
-
-/* 카드 타이틀 */
-.card-title {
-  font-family: var(--font-main);
-  font-size: 22px;
-  line-height: 1;
-  font-weight: 700;
-  color: var(--basicwhite);
-  display: inline-flex;
-}
-
-.card-text {
-  font-family: var(--font-main);
-  font-size: 18px;
-  line-height: 1.5;
-  color: var(--basicwhite);
-  margin-top: 30px;
-}
-
-.card-text-long {
-  font-family: var(--font-main);
-  font-size: 13px;
-  line-height: 1.5;
-  color: var(--basicwhite);
-  margin-top: 20px;
-}
 
 .pf-card {
   border: 1px solid rgba(255, 255, 255, 0.08);
   height: 250px;
   border-radius: 1rem;
-  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+
   transition: transform 0.2s ease-in-out;
   background: linear-gradient(159deg, rgba(255, 255, 255, 0.40) -100%, rgba(255, 255, 255, 0.04) 100%);
   box-shadow: -5px -5px 250px 0px rgba(255, 255, 255, 0.02) inset;
@@ -141,4 +46,96 @@ body {
   background: linear-gradient(159deg, rgba(255, 255, 255, 0.40) -100%, rgba(255, 255, 255, 0.04) 100%);
 
 }
+
+
+@media (max-width: 768px) {
+  .section-title{
+    font-size: 40px;
+  }
+
+  .card-title{
+    font-size: 3rem;
+  }
+
+  .card-text{
+      font-size: 18px;
+
+  }
+
+  .card-text-long{
+    font-size: 12px;
+
+  }
+}
+
+@media (max-width: 480px) {
+  .pf-card{
+    text-align: center;
+    width: 401.52px !important;
+    height: 385px !important;
+    border-radius: 19px;
+    object-fit: cover;
+  }
+
+  .card-title{
+    font-size: 16px !important;
+    display: inline-block;
+
+  }
+
+  .card-text{
+    font-size: 13px !important;
+
+
+  }
+}
+
+/*portfolios page begins*/
+
+
+.section-title {
+  font-family: var(--font-main);
+  font-size: 4.5rem;
+  font-weight: bold;
+  line-height: 1.1;
+  text-align: left;
+  margin-bottom: 10px;
+  margin-top: 80px;
+  color: var(--basicwhite);
+}
+
+
+/* 카드 스타일 */
+
+
+.pf-card:hover {
+  transform: translateY(-5px);
+}
+
+/* 카드 타이틀 */
+.card-title {
+  font-family: var(--font-main);
+  font-size: 22px;
+  line-height: 1;
+  font-weight: 700;
+  color: var(--basicwhite);
+
+}
+
+.card-text {
+  font-family: var(--font-main);
+  font-size: 18px;
+  line-height: 1.5;
+  color: var(--basicwhite);
+  margin-top: 30px;
+}
+
+.card-text-long {
+  font-family: var(--font-main);
+  font-size: 13px;
+  line-height: 1.5;
+  color: var(--basicwhite);
+  margin-top: 20px;
+}
+
 
